@@ -1,0 +1,22 @@
+{
+    "page.home.title": "Welcome to Hope Dev, a leading software development company that specializes in custom solutions to help businesses thrive in today's digital age.",
+    "page.route.home": "Home",
+    "page.route.about": "About us",
+    "page.route.others": "Others",
+    "page.route.services": "Services",
+    "page.route.contact": "Contact",
+    "page.route.blog": "Blog",
+    "page.route.team": "Team",
+    "page.route.portfolio": "Portfolio",
+    "page.route.tools": "Tools",
+    "page.route.cv": "Resumes",
+    "page.footer.section.content": "Content",
+    "page.footer.section.company": "Company",
+    "page.footer.section.legal": "Legal",
+    "page.footer.link.privacy": "Privacy policy",
+    "page.footer.link.terms": "Terms of use",
+    "page.footer.link.cookie": "Cookie policy",
+    "page.footer.section.language": "Language",
+    "page.footer.link.spanish": "Spanish",
+    "page.footer.link.english": "English"
+}
