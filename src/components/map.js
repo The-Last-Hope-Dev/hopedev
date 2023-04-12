@@ -8,6 +8,7 @@ import {
 export default function MapChartCol() {
     return (
         <ComposableMap
+            pointerEvents="none"
             className="lg:block xs:hidden"
             projection="geoAzimuthalEqualArea"
             style={{
