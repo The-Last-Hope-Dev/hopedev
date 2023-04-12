@@ -38,7 +38,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <h1 className="sm:text-4xl lg:text-5xl font-bold mb-4 text-neutral-content">
+                <h1 className={`${indexStyles.quote} text-5xl font-bold mb-4 text-neutral-content`}>
                   <q>
                     <FormattedMessage id="page.home.quote" />
                   </q>

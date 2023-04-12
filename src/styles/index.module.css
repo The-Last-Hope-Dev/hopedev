@@ -3,12 +3,15 @@
       width: 100vw !important;
       margin-left: 0;
     }
-  
     .standard p {
       margin:  0;
     }
+    .quote {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      text-align: center;
+    }
   }
-  
   .standard {
     min-height: 35vh;
   }
