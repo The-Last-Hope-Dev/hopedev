@@ -1,7 +1,8 @@
 {
-    "page.home.title": "Welcome to Hope Dev, a leading software development company that specializes in custom solutions to help businesses thrive in today's digital age.",
+    "page.home.title": "We are a software development company focused on driving the success of our clients in the digital world.",
     "page.route.home": "Home",
     "page.home.ct": "Contact us",
+    "page.home.quote": "We are committed to helping our clients achieve their business goals by creating customized and scalable solutions that enable them to compete in a constantly evolving global market.",
     "page.route.about": "About us",
     "page.route.others": "Others",
     "page.route.services": "Services",
@@ -20,5 +21,14 @@
     "page.footer.section.language": "Language",
     "page.footer.link.spanish": "Spanish",
     "page.footer.link.english": "English",
-    "page.footer.text.company":  "Providing Reliable Technology Solutions Since 2023"
+    "page.footer.text.company":  "Providing Reliable Technology Solutions Since 2023",
+    "page.home.section.title.quality": "Quality Software Development",
+    "page.home.section.item.standard.title": "Coding Standards",
+    "page.home.section.item.standard.description": "We maintain high coding standards to ensure that our projects are clear and consistent. This includes naming conventions, indentation, and comments, which help us develop clean and easily maintainable code.",
+    "page.home.section.item.test.title": "Unit Testing",
+    "page.home.section.item.test.description": "Our development process includes unit testing, which means we regularly check that our code works as expected. This helps us catch errors before they become critical and ensures that our code is robust.",
+    "page.home.section.item.code.title": "Code Reviews",
+    "page.home.section.item.code.description": "We review our code as a team to catch errors and identify opportunities for improvement. This way, we ensure that our code is as solid as possible and that we learn and grow together as a team.",
+    "page.home.section.item.automatization.title": "Automation",
+    "page.home.section.item.automatization.description": "We automate the build, packaging, and testing process to save time and reduce the risk of human errors. This allows us to focus on higher value tasks and ensure that our code is in good condition."
 }

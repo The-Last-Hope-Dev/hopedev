@@ -1,7 +1,8 @@
 {
-    "page.home.title": "Bienvenido a Hope Dev, una empresa líder en desarrollo de software que se especializa en soluciones personalizadas para ayudar a las empresas a prosperar en la era digital actual.",
+    "page.home.title": "Somos una empresa de desarrollo de software enfocada en impulsar el éxito de nuestros clientes en el mundo digital.",
     "page.route.home": "Inicio",
     "page.home.ct": "Contáctanos",
+    "page.home.quote": "Estamos comprometidos a ayudar a nuestros clientes a alcanzar sus objetivos de negocio mediante la creación de soluciones personalizadas y escalables que les permitan competir en un mercado global en constante evolución.",
     "page.route.about": "Nosotros",
     "page.route.services": "Servicios",
     "page.route.others": "Otros",
@@ -20,5 +21,14 @@
     "page.footer.section.language": "Idioma",
     "page.footer.link.spanish": "Español",
     "page.footer.link.english": "Inglés",
-    "page.footer.text.company":  "Brindando soluciones tecnológicas confiables desde 2023"
+    "page.footer.text.company":  "Brindando soluciones tecnológicas confiables desde 2023",
+    "page.home.section.title.quality": "Desarrollo de software de calidad",
+    "page.home.section.item.standard.title": "Estándares de codificación",
+    "page.home.section.item.standard.description": " Mantenemos altos estándares de codificación para garantizar que nuestros proyectos sean claros y coherentes. Esto incluye nomenclatura, indentación y comentarios, lo que nos ayuda a desarrollar un código limpio y fácilmente mantenible.",
+    "page.home.section.item.test.title": "Pruebas unitarias",
+    "page.home.section.item.test.description": " Nuestro proceso de desarrollo incluye pruebas unitarias, lo que significa que comprobamos regularmente que nuestro código funciona como se espera. Esto nos ayuda a detectar errores antes de que se vuelvan críticos y asegurarnos de que nuestro código sea robusto.",
+    "page.home.section.item.code.title": "Revisiones de código",
+    "page.home.section.item.code.description": "Revisamos nuestro código en equipo para detectar errores y oportunidades de mejora. De esta manera, nos aseguramos de que nuestro código sea lo más sólido posible y de que aprendamos y crezcamos juntos como equipo.",
+    "page.home.section.item.automatization.title": "Automatización",
+    "page.home.section.item.automatization.description": "Automatizamos el proceso de compilación, empaquetado y pruebas para ahorrar tiempo y reducir el riesgo de errores humanos. Esto nos permite centrarnos en tareas de mayor valor y asegurarnos de que nuestro código esté en buenas condiciones."
 }
