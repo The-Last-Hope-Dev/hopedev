@@ -6,9 +6,9 @@ export default function NavBar() {
     return (
         <header className="navbar bg-base-100">
             <div className="w-11/12">
-            <div className="flex-1">
+            <div className="flex-1 sm:ml-5">
                 <Link href="/" hrefLang="x-default">
-                    <Image src="/imgs/logo.png" alt="Logo HopeDev" width={40} height={40} />
+                    <Image className="sm:w-11 sm:h-11" src="/imgs/logo.png" alt="Logo HopeDev" width={40} height={40} />
                 </Link>
             </div>
             <div className="flex-none">
