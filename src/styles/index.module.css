@@ -1,0 +1,14 @@
+@media (min-width: 320px) and (max-width: 1023px) {
+    .standard {
+      width: 100vw !important;
+      margin-left: 0;
+    }
+  
+    .standard p {
+      margin:  0;
+    }
+  }
+  
+  .standard {
+    min-height: 35vh;
+  }

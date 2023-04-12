@@ -4,13 +4,14 @@ import { FormattedMessage } from "react-intl";
 
 export default function NavBar() {
     return (
-        <header className="navbar bg-base-100 fixed z-10">
+        <header className="navbar bg-base-100">
+            <div className="w-11/12">
             <div className="flex-1">
                 <Link href="/" hrefLang="x-default">
                     <Image src="/imgs/logo.png" alt="Logo HopeDev" width={40} height={40} />
                 </Link>
             </div>
-            <div className="flex-none mr-4">
+            <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
                     <li tabIndex={0}>
                         <a>
@@ -64,6 +65,7 @@ export default function NavBar() {
                         </ul>
                     </li>
                 </ul>
+            </div>
             </div>
         </header>
     )

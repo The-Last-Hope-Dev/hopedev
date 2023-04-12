@@ -58,16 +58,17 @@ export default function Footer() {
                     <span className="footer-title">
                         <FormattedMessage id="page.footer.section.language" />
                     </span>
-
-                    {[...locales].sort().map((locale) => (
-                        <Link key={locale} href="/" locale={locale}>
-                            {locale == 'en' ? (
+                    {[...locales].sort().map((locale) => {
+                        return locale == 'en' ? (
+                            <Link className="link link-hover" key={locale} href="/" locale={locale} hrefLang="en">
                                 <FormattedMessage id="page.footer.link.english" />
-                            ) : (
+                            </Link>
+                        ) : (
+                            <Link className="link link-hover" key={locale} href="/" locale={locale} hrefLang="es">
                                 <FormattedMessage id="page.footer.link.spanish" />
-                            )}
-                        </Link>
-                    ))}
+                            </Link>
+                        )
+                    })}
                 </div>
             </footer>
             <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
@@ -75,7 +76,9 @@ export default function Footer() {
                     <Link href="/" hrefLang="x-default">
                         <Image src="/imgs/logo.png" alt="Logo HopeDev" width={40} height={40} />
                     </Link>
-                    <p>Hope Dev. <br />Providing Reliable Technology Solutions Since 2023</p>
+                    <p>Hope Dev. <br />
+                        <FormattedMessage id="page.footer.text.company" />
+                    </p>
                 </div>
                 <div className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col gap-4">
