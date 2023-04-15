@@ -4,11 +4,11 @@ import { FormattedMessage } from "react-intl";
 
 export default function NavBar() {
     return (
-        <header className="navbar bg-base-100">
-            <div className="w-11/12">
-            <div className="flex-1 sm:ml-5">
-                <Link href="/" hrefLang="x-default">
-                    <Image className="sm:w-11 sm:h-11" src="/imgs/logo.png" alt="Logo HopeDev" width={40} height={40} />
+        <header className="navbar bg-base-100 sm:text-lg">
+            <div className="xs:w-3/4  md:w-11/12">
+            <div className="flex-1 xs:ml-0 sm:ml-5">
+                <Link href="/" hrefLang="x-default" className="w-fit block xs:w-8 xs:h-8 md:w-10 md:h-10">
+                    <Image src="/imgs/logo.png" alt="Logo HopeDev" width={40} height={40} />
                 </Link>
             </div>
             <div className="flex-none">

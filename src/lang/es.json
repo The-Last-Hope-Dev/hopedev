@@ -30,5 +30,8 @@
     "page.home.section.item.code.title": "Revisiones de código",
     "page.home.section.item.code.description": "Revisamos nuestro código en equipo para detectar errores y oportunidades de mejora. De esta manera, nos aseguramos de que nuestro código sea lo más sólido posible y de que aprendamos y crezcamos juntos como equipo.",
     "page.home.section.item.automatization.title": "Automatización",
-    "page.home.section.item.automatization.description": "Automatizamos el proceso de compilación, empaquetado y pruebas para ahorrar tiempo y reducir el riesgo de errores humanos. Esto nos permite centrarnos en tareas de mayor valor y asegurarnos de que nuestro código esté en buenas condiciones."
+    "page.home.section.item.automatization.description": "Automatizamos el proceso de compilación, empaquetado y pruebas para ahorrar tiempo y reducir el riesgo de errores humanos. Esto nos permite centrarnos en tareas de mayor valor y asegurarnos de que nuestro código esté en buenas condiciones.",
+    "page.home.cta.title": "¡Descubre cómo podemos ayudarte a llevar tu negocio al siguiente nivel!",
+    "page.home.cta.message": "Desarrollo a medida para cualquier tipo de dispositivo"
+
 }

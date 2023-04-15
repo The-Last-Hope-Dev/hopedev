@@ -30,5 +30,8 @@
     "page.home.section.item.code.title": "Code Reviews",
     "page.home.section.item.code.description": "We review our code as a team to catch errors and identify opportunities for improvement. This way, we ensure that our code is as solid as possible and that we learn and grow together as a team.",
     "page.home.section.item.automatization.title": "Automation",
-    "page.home.section.item.automatization.description": "We automate the build, packaging, and testing process to save time and reduce the risk of human errors. This allows us to focus on higher value tasks and ensure that our code is in good condition."
+    "page.home.section.item.automatization.description": "We automate the build, packaging, and testing process to save time and reduce the risk of human errors. This allows us to focus on higher value tasks and ensure that our code is in good condition.",
+    "page.home.cta.title": "¡Discover how we can help take your business to the next level!",
+    "page.home.cta.message": "Custom development for any type of device"
+
 }

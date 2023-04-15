@@ -130,15 +130,19 @@ export default function Home() {
               <div className={`${indexStyles.mockups} mockup-phone border-primary`}>
                 <div className="camera"></div>
                 <div className="display">
-                  <div className="artboard artboard-demo phone-1" style={{ width: '306px', height: '600px'}}>
+                  <div className="artboard artboard-demo phone-1" style={{ width: '306px', height: '600px' }}>
                     <Image src="/imgs/supreme.png" alt="website mockup image" width={306} height={600} />
                   </div>
                 </div>
               </div>
             </div>
             <div className="max-w-md">
-              <h1 className="text-4xl md:text-4xl lg:text-4xl font-bold ">¡Descubre cómo podemos ayudarte a llevar tu negocio al siguiente nivel!</h1>
-              <p className="text-2xl  py-6">Desarrollo a medida para cualquier tipo de dispositivo</p>
+              <h1 className="text-4xl md:text-4xl lg:text-4xl font-bold ">
+                <FormattedMessage id="page.home.cta.title" />
+                </h1>
+              <p className="text-xl py-6">
+                <FormattedMessage id="page.home.cta.message" />
+                </p>
               <Link href="/contact" hrefLang="x-default">
                 <button className="btn btn-primary">
                   <FormattedMessage id="page.home.ct" />
