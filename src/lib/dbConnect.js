@@ -2,12 +2,11 @@ import mongoose from 'mongoose'
 
 const URI_MONGO = process.env.URI_MONGO
 
-/* if (!URI_MONGO) {
+if (!URI_MONGO) {
     throw new Error(
         'Please define the URI_MONGO environment variable inside .env.local'
     )
 }
- */
 /**
  * Global is used here to maintain a cached connection across hot reloads
  * in development. This prevents connections growing exponentially

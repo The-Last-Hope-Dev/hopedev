@@ -1,4 +1,6 @@
-{
+{   
+    "page.contact.description": "Contact page HopeDev",
+    "page.home.description": "Home page HopeDev",
     "page.home.title": "We are a software development company focused on driving the success of our clients in the digital world.",
     "page.route.home": "Home",
     "page.home.ct": "Contact us",

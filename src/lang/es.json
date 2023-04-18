@@ -1,4 +1,6 @@
-{
+{   
+    "page.contact.description": "Pagina de contacto HopeDev",
+    "page.home.description": "Pagina de inicio HopeDev",
     "page.home.title": "Somos una empresa de desarrollo de software enfocada en impulsar el éxito de nuestros clientes en el mundo digital.",
     "page.route.home": "Inicio",
     "page.home.ct": "Contáctanos",

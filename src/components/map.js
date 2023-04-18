@@ -44,7 +44,7 @@ export default function MapChartCol() {
                 }}
             >
                 <text x="-10" textAnchor="end" alignmentBaseline="middle" fill="#661AE6" className="text-xl font-bold">
-                    {"Medellin, Ant"}
+                    {"Medellín, Ant"}
                 </text>
             </Annotation>
         </ComposableMap>

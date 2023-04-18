@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 
 export default function NavBar() {
     return (
-        <header className="navbar bg-base-100 sm:text-lg">
+        <header className="navbar bg-base-100 sm:text-base">
             <div className="xs:w-3/4  md:w-11/12">
             <div className="flex-1 xs:ml-0 sm:ml-5">
                 <Link href="/" hrefLang="x-default" className="w-fit block xs:w-8 xs:h-8 md:w-10 md:h-10">

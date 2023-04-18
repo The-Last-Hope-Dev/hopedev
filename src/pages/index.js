@@ -3,13 +3,13 @@ import { FormattedMessage } from "react-intl";
 import indexStyles from "@/styles/index.module.css";
 import Image from "next/image"
 import Link from "next/link"
-
-const title = "HopeDev | Home"
-const description = "Home page HopeDev"
+import { useIntl } from "react-intl";
 
 export default function Home() {
+  const intl = useIntl();
+
   return (
-    <Layout title={title} description={description}>
+    <Layout title={`HopeDev | ${intl.formatMessage({id: 'page.route.home'})}`} description={intl.formatMessage({id: "page.home.description"})}>
       <>
         {/*Section 1 */}
         <div className="hero min-h-screen" style={{ backgroundImage: `url("/imgs/hero-bg.jpg")` }}>
@@ -139,10 +139,10 @@ export default function Home() {
             <div className="max-w-md">
               <h1 className="text-4xl md:text-4xl lg:text-4xl font-bold ">
                 <FormattedMessage id="page.home.cta.title" />
-                </h1>
+              </h1>
               <p className="text-xl py-6">
                 <FormattedMessage id="page.home.cta.message" />
-                </p>
+              </p>
               <Link href="/contact" hrefLang="x-default">
                 <button className="btn btn-primary">
                   <FormattedMessage id="page.home.ct" />

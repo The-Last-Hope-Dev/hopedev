@@ -1,95 +1,134 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import Layout from "@/components/layout";
 import MapChart from "@/components/map";
-import dbConnect from "@/lib/dbConnect";
-import Movie from "@/models/Movie.js"
+import Alert from "@/components/alert";
+import { useIntl } from "react-intl";
+import { headers } from "@/utils/constants";
+import { AlertTypes, EMAIL_RGX } from "@/utils/constants";
 
-const title = "Contact | HopeDev"
-const description = "Contact page HopeDev"
+import ReCAPTCHA from "react-google-recaptcha";
+const recaptchakey = process.env.NEXT_PUBLIC_CAPTCHA_CLIENT;
 
-export default function Contact({ tests }) {
+export default function Contact() {
+    const intl = useIntl();
 
     const [formData, setFormData] = useState({
         email: "",
-        message: ""
+        message: "",
+        captcha: ""
     });
-    const [formSuccess, setFormSuccess] = useState(false)
+    const [responseType, setResponseType] = useState(null);
+    const [formMessage, setFormMessage] = useState("");
+    const [emailRequired, setEmailRequired] = useState(false);
 
-    const handleInput = (e) => {
-        const fieldName = e.target.name;
-        const fieldValue = e.target.value;
-
-        setFormData((prevState) => ({
-            ...prevState,
-            [fieldName]: fieldValue
-        }));
+    const onReCAPTCHAChange = async (captchaCode) => {
+        if (!captchaCode) {
+            return;
+        }
+        setFormData({
+            ...formData,
+            captcha: captchaCode
+        })
     }
 
-    const submitForm = (e) => {
-        // We don't want the page to refresh
-        e.preventDefault()
-
-        const formURL = e.target.action
-        const data = new FormData()
-
-        // Turn our formData state into data we can use with a form submission
-        Object.entries(formData).forEach(([key, value]) => {
-            data.append(key, value);
+    const handleInput = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setFormData({
+            ...formData,
+            [name]: value
         });
+    }
 
-        /*   // POST the data to the URL of the form
-          fetch(formURL, {
-              method: "POST",
-              body: data,
-              headers: {
-                  'accept': 'application/json',
-              },
-          }).then(() => {
-              setFormData({
-                  name: "",
-                  email: "",
-                  message: ""
-              })
-              setFormSuccess(true)
-          }) */
+    const handleSubmitForm = (e) => {
+        // We don't want the page to refresh
+        e.preventDefault();
+        handlePostForm(formData);
     }
 
     useEffect(() => {
-        console.log(tests)
-    }, [tests]);
+        if (responseType !== null) {
+            setTimeout(() => {
+                setResponseType(null);
+                setEmailRequired(false);
+            }, 4000);
+        }
+    }, [responseType]);
+
+    const handlePostForm = async (form) => {
+        if (!form.email) {
+            setFormMessage("Por favor ingrese un correo electronico");
+            setResponseType(AlertTypes.ERROR);
+            setEmailRequired(true);
+            return;
+        }
+        if (!EMAIL_RGX.test(form.email)) {
+            setFormMessage("El email ingresado no es válido");
+            setResponseType(AlertTypes.ERROR);
+            return;
+        }
+
+        try {
+            const res = await fetch("/api/form", {
+                method: "POST",
+                headers,
+                body: JSON.stringify(form)
+            });
+
+            if (!res.ok) {
+                setFormMessage("La informacion no se envio");
+                setResponseType(AlertTypes.ERROR);
+                return;
+            }
+
+            setFormMessage("Te contactaremos pronto!");
+            setResponseType(AlertTypes.SUCCESS);
+        } catch (e) {
+            setFormMessage("Oops, Algo salio mal");
+            setResponseType(AlertTypes.WARNING);
+        }
+    }
 
     return (
-        <Layout title={title} description={description}>
+        <Layout title={`${intl.formatMessage({ id: 'page.route.contact' })} | HopeDev`} description={intl.formatMessage({ id: "page.home.description" })}>
             <div className="hero min-h-screen bg-base-200">
                 <MapChart />
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">¡Hablemos de tus necesidades!</h1>
-                        <p className="py-6">Contáctanos y descubre cómo podemos ayudarte a alcanzar tus metas.</p>
+                        <h1 className="text-4xl font-bold">¡Hablemos de tus necesidades!</h1>
+                        <p className="py-6 text-lg">Contáctanos y descubre cómo podemos ayudarte a alcanzar tus metas.</p>
 
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body">
-                            <form action="/send-data-here" method="post" onSubmit={submitForm}>
+                            <form onSubmit={handleSubmitForm}>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Email</span>
+                                        <span className="label-text text-lg">Email</span>
+                                        {emailRequired && (<span className="label-text-alt text-error">Requerido</span>)}
                                     </label>
-                                    <input name="email" type="text" placeholder="email" className="input input-bordered" onChange={handleInput} value={formData.email} />
+                                    <input autoComplete="off" name="email" type="text" placeholder="email" className={`input input-bordered ${emailRequired ? "input-error" : ""}`} onChange={handleInput} value={formData.email} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Comentario</span>
+                                        <span className="label-text text-lg">Comentario</span>
                                         <span className="label-text-alt">Opcional</span>
                                     </label>
                                     <textarea
+                                        autoComplete="off"
+                                        maxLength="1000"
                                         name="message"
-                                        className="textarea textarea-bordered h-24"
-                                        placeholder="Dejanos un comentario, pronto te responderemos."
+                                        className="textarea textarea-bordered xs:h-40 md:h-28"
+                                        placeholder="comentario"
                                         onChange={handleInput}
                                         value={formData.message}></textarea>
                                 </div>
-                                <div className="form-control mt-6">
+                                <ReCAPTCHA
+                                    className="mt-3"
+                                    sitekey={recaptchakey}
+                                    onChange={onReCAPTCHAChange}
+                                />
+                                <div className="form-control mt-5">
                                     <button className="btn btn-primary">Enviar</button>
                                 </div>
                             </form>
@@ -97,23 +136,7 @@ export default function Contact({ tests }) {
                     </div>
                 </div>
             </div>
+            {responseType ? <Alert alertType={responseType} message={formMessage} /> : null}
         </Layout>
     )
-}
-
-export async function getServerSideProps() {
-    try {
-        await dbConnect();
-        const result = await Movie.find({});
-        const tests = result.map((doc) => {
-            const test = doc.toObject();
-            test._id = test._id.toString();
-            return test;
-        });
-
-        return { props: { tests } };
-    } catch (error) {
-        console.log(error);
-        return { props: {} };
-    }
 }
