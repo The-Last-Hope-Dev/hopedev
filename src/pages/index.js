@@ -1,15 +1,14 @@
 import Layout from "@/components/layout"
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import indexStyles from "@/styles/index.module.css";
 import Image from "next/image"
 import Link from "next/link"
-import { useIntl } from "react-intl";
 
 export default function Home() {
   const intl = useIntl();
 
   return (
-    <Layout title={`HopeDev | ${intl.formatMessage({id: 'page.route.home'})}`} description={intl.formatMessage({id: "page.home.description"})}>
+    <Layout title={`HopeDev | ${intl.formatMessage({ id: 'page.route.home' })}`} description={intl.formatMessage({ id: "page.home.description" })}>
       <>
         {/*Section 1 */}
         <div className="hero min-h-screen" style={{ backgroundImage: `url("/imgs/hero-bg.jpg")` }}>
@@ -51,6 +50,14 @@ export default function Home() {
           </div>
         </div>
         {/*Section 3 */}
+        <div className="min-h-screen">
+          <div className="w-screen text-center pt-5">
+            <h2 className="mb-5 text-4xl font-bold p-5 ">
+              <FormattedMessage id="page.home.section.title.services" />
+            </h2>
+          </div>
+        </div>
+        {/*Section 4 */}
         <div className="min-h-screen max-h-fit">
           <div className="w-screen text-center pt-5">
             <h2 className="mb-5 text-4xl font-bold p-5 ">
@@ -118,11 +125,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/*Section 4 */}
+        {/*Section 5 */}
         <div className="hero min-h-screen">
           <div className="hero-content flex-col lg:flex-row-reverse md:flex-row-reverse">
-            <div className="xs:hidden md:flex md:flex-row items-center lg:ml-48 md:ml-20">
-              <div className="mockup-window border-4 border-primary bg-base-300 h-56 w-96  md:absolute md:left-2/4">
+            <div className="xs:hidden md:flex md:flex-row items-center lg:ml-48 md:ml-20 md:relative">
+              <div className="mockup-window border-4 border-primary bg-base-300 h-56 w-96 md:absolute md:right-9 lg:right-1/3">
                 <div className="flex justify-center bg-base-200">
                   <Image src="/imgs/mockup.jpg" alt="website mockup image" width={600} height={600} />
                 </div>

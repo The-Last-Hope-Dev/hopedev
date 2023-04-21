@@ -8,7 +8,7 @@ export default function Footer() {
 
     return (
         <>
-            <footer className="footer p-10 bg-base-200 text-base-content text-base">
+            <footer className="footer p-10 bg-base-300 text-primary-content text-base">
                 <div>
                     <span className="footer-title">
                         <FormattedMessage id="page.footer.section.content" />
@@ -71,7 +71,7 @@ export default function Footer() {
                     })}
                 </div>
             </footer>
-            <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300 text-lg">
+            <footer className="footer px-10 py-4 border-t bg-base-300 text-primary-content border-base-100 text-base">
                 <div className="items-center grid-flow-col">
                     <Link href="/" hrefLang="x-default">
                         <Image src="/imgs/logo.png" alt="Logo HopeDev" width={40} height={40} />

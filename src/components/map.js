@@ -10,22 +10,20 @@ export default function MapChartCol() {
         <ComposableMap
             pointerEvents="none"
             className="lg:block xs:hidden"
-            projection="geoAzimuthalEqualArea"
             style={{
                 width: "100%",
                 height: "100vh",
-                position: "absolute",
             }}
             projectionConfig={{
                 rotate: [3, 7, 2],
-                center: [-90, 4],
+                center: [-88, 4],
                 scale: 1650
             }}
         >
             <Geographies
                 geography="/col.json"
-                fill="#D6D6DA"
-                stroke="#FFFFFF"
+                fill="#ddd"
+                geo="geography"
             >
                 {({ geographies }) =>
                     geographies.map((geo) => (

@@ -1,12 +1,13 @@
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import Layout from "@/components/layout";
 import MapChart from "@/components/map";
 import Alert from "@/components/alert";
-import { useIntl } from "react-intl";
+import { useIntl, FormattedMessage } from "react-intl";
 import { headers } from "@/utils/constants";
 import { AlertTypes, EMAIL_RGX } from "@/utils/constants";
 
-import ReCAPTCHA from "react-google-recaptcha";
+const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"));
 const recaptchakey = process.env.NEXT_PUBLIC_CAPTCHA_CLIENT;
 
 export default function Contact() {
@@ -20,6 +21,7 @@ export default function Contact() {
     const [responseType, setResponseType] = useState(null);
     const [formMessage, setFormMessage] = useState("");
     const [emailRequired, setEmailRequired] = useState(false);
+    const [recaptchaNeeded, setRecaptchaNeeded] = useState(false);
 
     const onReCAPTCHAChange = async (captchaCode) => {
         if (!captchaCode) {
@@ -38,6 +40,7 @@ export default function Contact() {
             ...formData,
             [name]: value
         });
+        setRecaptchaNeeded(true);
     }
 
     const handleSubmitForm = (e) => {
@@ -88,15 +91,16 @@ export default function Contact() {
             setResponseType(AlertTypes.WARNING);
         }
     }
+  /*   intl.formatMessage({ id: "page.home.description" }) */
 
     return (
         <Layout title={`${intl.formatMessage({ id: 'page.route.contact' })} | HopeDev`} description={intl.formatMessage({ id: "page.home.description" })}>
             <div className="hero min-h-screen bg-base-200">
-                <MapChart />
+            <MapChart />
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-4xl font-bold">¡Hablemos de tus necesidades!</h1>
-                        <p className="py-6 text-lg">Contáctanos y descubre cómo podemos ayudarte a alcanzar tus metas.</p>
+                        <h1 className="text-4xl font-bold"> <FormattedMessage id="page.contact.title" /></h1>
+                        <p className="py-6 text-lg"> <FormattedMessage id="page.contact.title.secondary" /></p>
 
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -104,32 +108,34 @@ export default function Contact() {
                             <form onSubmit={handleSubmitForm}>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-lg">Email</span>
-                                        {emailRequired && (<span className="label-text-alt text-error">Requerido</span>)}
+                                        <span className="label-text text-lg"><FormattedMessage id="page.contact.form.email" /></span>
+                                        {emailRequired && (<span className="label-text-alt text-error"><FormattedMessage id="page.contact.form.email.required" /></span>)}
                                     </label>
-                                    <input autoComplete="off" name="email" type="text" placeholder="email" className={`input input-bordered ${emailRequired ? "input-error" : ""}`} onChange={handleInput} value={formData.email} />
+                                    <input autoComplete="off" name="email" type="text" placeholder={intl.formatMessage({ id: 'page.contact.form.email.placeholder' })} className={`text-base input input-bordered ${emailRequired ? "input-error" : ""}`} onChange={handleInput} value={formData.email} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-lg">Comentario</span>
-                                        <span className="label-text-alt">Opcional</span>
+                                        <span className="label-text text-lg"><FormattedMessage id="page.contact.form.comment" /></span>
+                                        <span className="label-text-alt"><FormattedMessage id="page.contact.form.comment.optional" /></span>
                                     </label>
                                     <textarea
                                         autoComplete="off"
                                         maxLength="1000"
                                         name="message"
-                                        className="textarea textarea-bordered xs:h-40 md:h-28"
-                                        placeholder="comentario"
+                                        className="text-base textarea textarea-bordered xs:h-40 md:h-28"
+                                        placeholder={intl.formatMessage({ id: 'page.contact.form.comment.placeholder' })}
                                         onChange={handleInput}
                                         value={formData.message}></textarea>
                                 </div>
-                                <ReCAPTCHA
-                                    className="mt-3"
-                                    sitekey={recaptchakey}
-                                    onChange={onReCAPTCHAChange}
-                                />
+                                {recaptchaNeeded && (
+                                    <ReCAPTCHA
+                                        className="mt-3"
+                                        sitekey={recaptchakey}
+                                        onChange={onReCAPTCHAChange}
+                                    />
+                                )}
                                 <div className="form-control mt-5">
-                                    <button className="btn btn-primary">Enviar</button>
+                                    <button className="btn btn-primary"><FormattedMessage id="page.contact.form.submit" /></button>
                                 </div>
                             </form>
                         </div>

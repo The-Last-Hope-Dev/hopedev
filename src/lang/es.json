@@ -1,10 +1,9 @@
 {   
-    "page.contact.description": "Pagina de contacto HopeDev",
     "page.home.description": "Pagina de inicio HopeDev",
     "page.home.title": "Somos una empresa de desarrollo de software enfocada en impulsar el éxito de nuestros clientes en el mundo digital.",
-    "page.route.home": "Inicio",
     "page.home.ct": "Contáctanos",
     "page.home.quote": "Estamos comprometidos a ayudar a nuestros clientes a alcanzar sus objetivos de negocio mediante la creación de soluciones personalizadas y escalables que les permitan competir en un mercado global en constante evolución.",
+    "page.route.home": "Inicio",
     "page.route.about": "Nosotros",
     "page.route.services": "Servicios",
     "page.route.others": "Otros",
@@ -25,6 +24,7 @@
     "page.footer.link.english": "Inglés",
     "page.footer.text.company":  "Brindando soluciones tecnológicas confiables desde 2023",
     "page.home.section.title.quality": "Desarrollo de software de calidad",
+    "page.home.section.title.services": "Nuestros servicios",
     "page.home.section.item.standard.title": "Estándares de codificación",
     "page.home.section.item.standard.description": " Mantenemos altos estándares de codificación para garantizar que nuestros proyectos sean claros y coherentes. Esto incluye nomenclatura, indentación y comentarios, lo que nos ayuda a desarrollar un código limpio y fácilmente mantenible.",
     "page.home.section.item.test.title": "Pruebas unitarias",
@@ -34,6 +34,15 @@
     "page.home.section.item.automatization.title": "Automatización",
     "page.home.section.item.automatization.description": "Automatizamos el proceso de compilación, empaquetado y pruebas para ahorrar tiempo y reducir el riesgo de errores humanos. Esto nos permite centrarnos en tareas de mayor valor y asegurarnos de que nuestro código esté en buenas condiciones.",
     "page.home.cta.title": "¡Descubre cómo podemos ayudarte a llevar tu negocio al siguiente nivel!",
-    "page.home.cta.message": "Desarrollo a medida para cualquier tipo de dispositivo"
-
+    "page.home.cta.message": "Desarrollo a medida para cualquier tipo de dispositivo",
+    "page.contact.description": "Pagina de contacto HopeDev",
+    "page.contact.title": "¡Hablemos de tus necesidades!",
+    "page.contact.title.secondary": "Contáctanos y descubre cómo podemos ayudarte a alcanzar tus metas.",
+    "page.contact.form.email": "Email",
+    "page.contact.form.email.placeholder": "Tu correo electronico",
+    "page.contact.form.email.required": "Requerido",
+    "page.contact.form.comment": "Comentario",
+    "page.contact.form.comment.placeholder": "Cuentanos acerca de tu proyecto",
+    "page.contact.form.comment.optional": "Opcional",
+    "page.contact.form.submit": "Enviar"
 }
