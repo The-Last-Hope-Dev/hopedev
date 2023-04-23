@@ -9,7 +9,7 @@ export default function Layout({ children, title, description }) {
     return (
         <>
             <Head>
-                <link rel="icon" href="/imgs/favicon.ico" />
+                <link rel="icon" href="/imgs/favicon-64.png" />
                 <title>{title}</title>
                 <meta name="description" content={description} />
             </Head>
@@ -24,7 +24,7 @@ export default function Layout({ children, title, description }) {
                         </div>
                         <div className="flex-1 px-2 mx-2">
                             <Link href="/" hrefLang="x-default" className="w-fit block">
-                                <Image src="/imgs/logo.png" alt="Logo HopeDev" width={40} height={40} />
+                                <Image src="/imgs/favicon-64.png" alt="Logo HopeDev" width={40} height={40} />
                             </Link>
                         </div>
                         <div className="flex-none hidden lg:block">

@@ -3,6 +3,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import indexStyles from "@/styles/index.module.css";
 import Image from "next/image"
 import Link from "next/link"
+import Card from '@/components/card'
 
 export default function Home() {
   const intl = useIntl();
@@ -11,7 +12,7 @@ export default function Home() {
     <Layout title={`HopeDev | ${intl.formatMessage({ id: 'page.route.home' })}`} description={intl.formatMessage({ id: "page.home.description" })}>
       <>
         {/*Section 1 */}
-        <div className="hero min-h-screen" style={{ backgroundImage: `url("/imgs/hero-bg.jpg")` }}>
+        <div className="hero min-h-screen" style={{ backgroundImage: `url("/imgs/hero-bg.jpg")`, width: "auto", height: "auto" }}>
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center ">
             <div className="max-w-md">
@@ -52,10 +53,31 @@ export default function Home() {
         {/*Section 3 */}
         <div className="min-h-screen">
           <div className="w-screen text-center pt-5">
-            <h2 className="mb-5 text-4xl font-bold p-5 ">
+            <h2 className="mb-5 text-4xl font-bold p-5">
               <FormattedMessage id="page.home.section.title.services" />
             </h2>
           </div>
+          <div class="grid grid-cols-2 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-9">
+            <div class="flex items-center justify-center">
+             <Card />
+            </div>
+            <div class="flex items-center justify-center">
+             <Card />
+            </div>
+            <div class="flex items-center justify-center">
+             <Card />
+            </div>
+            <div class="flex items-center justify-center">
+             <Card />
+            </div>
+            <div class="flex items-center justify-center">
+             <Card />
+            </div>
+            <div class="flex items-center justify-center">
+             <Card />
+            </div>
+          </div>
+
         </div>
         {/*Section 4 */}
         <div className="min-h-screen max-h-fit">
@@ -128,20 +150,8 @@ export default function Home() {
         {/*Section 5 */}
         <div className="hero min-h-screen">
           <div className="hero-content flex-col lg:flex-row-reverse md:flex-row-reverse">
-            <div className="xs:hidden md:flex md:flex-row items-center lg:ml-48 md:ml-20 md:relative">
-              <div className="mockup-window border-4 border-primary bg-base-300 h-56 w-96 md:absolute md:right-9 lg:right-1/3">
-                <div className="flex justify-center bg-base-200">
-                  <Image src="/imgs/mockup.jpg" alt="website mockup image" width={600} height={600} />
-                </div>
-              </div>
-              <div className={`${indexStyles.mockups} mockup-phone border-primary`}>
-                <div className="camera"></div>
-                <div className="display">
-                  <div className="artboard artboard-demo phone-1" style={{ width: '306px', height: '600px' }}>
-                    <Image src="/imgs/supreme.png" alt="website mockup image" width={306} height={600} />
-                  </div>
-                </div>
-              </div>
+            <div className="lg:ml-28 md:ml-10 md:relative">
+              <Image src="/imgs/smartmockup.png" alt="mockup" height={1066} width={1062} />
             </div>
             <div className="max-w-md">
               <h1 className="text-4xl md:text-4xl lg:text-4xl font-bold ">

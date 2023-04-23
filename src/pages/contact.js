@@ -101,24 +101,24 @@ export default function Contact() {
                     <div className="text-center lg:text-left">
                         <h1 className="text-4xl font-bold"> <FormattedMessage id="page.contact.title" /></h1>
                         <p className="py-6 text-lg"> <FormattedMessage id="page.contact.title.secondary" /></p>
-
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body">
                             <form onSubmit={handleSubmitForm}>
                                 <div className="form-control">
-                                    <label className="label">
+                                    <label className="label" for="email">
                                         <span className="label-text text-lg"><FormattedMessage id="page.contact.form.email" /></span>
                                         {emailRequired && (<span className="label-text-alt text-error"><FormattedMessage id="page.contact.form.email.required" /></span>)}
                                     </label>
-                                    <input autoComplete="off" name="email" type="text" placeholder={intl.formatMessage({ id: 'page.contact.form.email.placeholder' })} className={`text-base input input-bordered ${emailRequired ? "input-error" : ""}`} onChange={handleInput} value={formData.email} />
+                                    <input id="email" autoComplete="off" name="email" type="text" placeholder={intl.formatMessage({ id: 'page.contact.form.email.placeholder' })} className={`text-base input input-bordered ${emailRequired ? "input-error" : ""}`} onChange={handleInput} value={formData.email} />
                                 </div>
                                 <div className="form-control">
-                                    <label className="label">
+                                    <label className="label" for="comment">
                                         <span className="label-text text-lg"><FormattedMessage id="page.contact.form.comment" /></span>
                                         <span className="label-text-alt"><FormattedMessage id="page.contact.form.comment.optional" /></span>
                                     </label>
                                     <textarea
+                                        id="comment"
                                         autoComplete="off"
                                         maxLength="1000"
                                         name="message"

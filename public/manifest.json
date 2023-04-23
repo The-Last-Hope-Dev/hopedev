@@ -1,0 +1,16 @@
+{
+    "name": "HopeDev",
+    "short_name": "HopeDev",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#374151",
+    "icons": [
+      {
+        "src": "/imgs/logo.png",
+        "sizes": "64x64",
+        "type": "image/png"
+      }
+    ],
+    "theme_color_dark": "#1F2937"
+  }
