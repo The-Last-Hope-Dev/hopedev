@@ -74,7 +74,7 @@ export default function Footer() {
             <footer className="footer px-10 py-4 border-t bg-base-300 text-primary-content border-base-100 text-base">
                 <div className="items-center grid-flow-col">
                     <Link href="/" hrefLang="x-default">
-                        <Image src="/imgs/logo.png" alt="Logo HopeDev" width={40} height={40} />
+                        <Image src="/imgs/favicon-64.png" alt="Logo HopeDev" width={40} height={40} />
                     </Link>
                     <p>Hope Dev. <br />
                         <FormattedMessage id="page.footer.text.company" />

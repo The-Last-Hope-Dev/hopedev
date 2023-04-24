@@ -106,14 +106,14 @@ export default function Contact() {
                         <div className="card-body">
                             <form onSubmit={handleSubmitForm}>
                                 <div className="form-control">
-                                    <label className="label" for="email">
+                                    <label className="label" htmlFor="email">
                                         <span className="label-text text-lg"><FormattedMessage id="page.contact.form.email" /></span>
                                         {emailRequired && (<span className="label-text-alt text-error"><FormattedMessage id="page.contact.form.email.required" /></span>)}
                                     </label>
                                     <input id="email" autoComplete="off" name="email" type="text" placeholder={intl.formatMessage({ id: 'page.contact.form.email.placeholder' })} className={`text-base input input-bordered ${emailRequired ? "input-error" : ""}`} onChange={handleInput} value={formData.email} />
                                 </div>
                                 <div className="form-control">
-                                    <label className="label" for="comment">
+                                    <label className="label" htmlFor="comment">
                                         <span className="label-text text-lg"><FormattedMessage id="page.contact.form.comment" /></span>
                                         <span className="label-text-alt"><FormattedMessage id="page.contact.form.comment.optional" /></span>
                                     </label>

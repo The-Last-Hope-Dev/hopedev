@@ -1,19 +1,20 @@
 import Image from "next/image"
 
-export default function Card() {
+export default function Card({ title, description, image, categoryOne, categoryTwo }) {
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
-            <figure> <Image src="/imgs/smartmockup.png" alt="mockup" height={500} width={500} /></figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                    Shoes!
-                    <div className="badge badge-secondary">NEW</div>
+        <div className="card w-96 h-full flex flex-col justify-between shadow-xl">
+            <figure className="mx-2">
+                <Image src={image} alt={`${title} mockup`} height={400} width={400} />
+            </figure>
+            <div className="card-body flex-grow">
+                <h2 className="card-title text-2xl font-bold">
+                    {title}
                 </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Fashion</div>
-                    <div className="badge badge-outline">Products</div>
-                </div>
+                <p className="text-xl">{description}</p>
+            </div>
+            <div className="card-actions flex justify-center mb-4">
+                <div className="badge badge-outline p-3 ">{categoryOne}</div>
+                <div className="badge badge-outline p-3">{categoryTwo}</div>
             </div>
         </div>
     )

@@ -44,5 +44,25 @@
     "page.contact.form.comment": "Comentario",
     "page.contact.form.comment.placeholder": "Cuentanos acerca de tu proyecto",
     "page.contact.form.comment.optional": "Opcional",
-    "page.contact.form.submit": "Enviar"
+    "page.contact.form.submit": "Enviar",
+
+    "page.home.card.ti.title": "Consultoría de TI",
+    "page.home.card.ti.description": "Ofrecemos servicios de consultoría para ayudar a las empresas a tomar decisiones informadas sobre tecnología de la información.",
+    "page.home.card.ti.category.one": "Tecnología de la Información",
+    "page.home.card.ti.category.two": "Consultoría",
+    "page.home.card.soft.title": "Desarrollo de software personalizado",
+    "page.home.card.soft.description": "Desarrollamos soluciones de software personalizadas para satisfacer las necesidades específicas de cada cliente.",
+    "page.home.card.soft.category.one": "Desarrollo de software",
+    "page.home.card.soft.category.two": "Programación",
+    "page.home.card.auto.title": "Automatización de procesos empresariales",
+    "page.home.card.auto.description": "Ayudamos a las empresas a mejorar su eficiencia y productividad mediante la automatización de procesos empresariales.",
+    "page.home.card.auto.category.one": "Automatización",
+    "page.home.card.auto.category.two": "Negocios",
+    "page.home.card.support.title": "Servicios de mantenimiento y soporte",
+    "page.home.card.support.description": "Ofrecemos servicios de mantenimiento y soporte para garantizar que los sistemas de nuestros clientes funcionen sin problemas.",
+    "page.home.card.support.category.one": "Tecnología de la Información",
+    "page.home.card.support.category.two": "Soporte"
 }
+
+
+

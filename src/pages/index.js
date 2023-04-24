@@ -3,7 +3,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import indexStyles from "@/styles/index.module.css";
 import Image from "next/image"
 import Link from "next/link"
-import Card from '@/components/card'
+import Service from "@/components/service";
 
 export default function Home() {
   const intl = useIntl();
@@ -30,6 +30,45 @@ export default function Home() {
         </div>
         {/*Section 2 */}
         <div className="min-h-screen">
+          <h2 className="mt-20 text-4xl font-bold text-center">
+            Desarrollo de software con propósito
+          </h2>
+          <div className="grid grid-cols-3 h-screen">
+            <div className="bg-gray-500 flex justify-center items-center">
+              <p className="text-xl max-w-sm">En HopeDev, somos apasionados del desarrollo de software y estamos comprometidos en impulsar el éxito de nuestros clientes en el mundo digital. Nuestra experiencia y conocimiento en tecnología nos permiten crear soluciones a medida que impulsan la eficiencia y la productividad. Nos enfocamos en crear relaciones a largo plazo con nuestros clientes, trabajando juntos para alcanzar sus metas y objetivos de negocio. En HopeDev, no solo creamos software, creamos soluciones innovadoras que transforman los negocios y cambian el mundo.</p>
+            </div>
+            <div className="bg-gray-400">Columna 2</div>
+            <div className="bg-gray-300 flex justify-center items-center">
+              <div className="stats stats-vertical shadow ">
+                <div className="stat">
+                  <div className="stat-title">Downloads</div>
+                  <div className="stat-value">31K</div>
+                  <div className="stat-desc">Jan 1st - Feb 1st</div>
+                </div>
+
+                <div className="stat">
+                  <div className="stat-title">New Users</div>
+                  <div className="stat-value">4,200</div>
+                  <div className="stat-desc">↗︎ 400 (22%)</div>
+                </div>
+
+                <div className="stat">
+                  <div className="stat-title">New Registers</div>
+                  <div className="stat-value">1,200</div>
+                  <div className="stat-desc">↘︎ 90 (14%)</div>
+                </div>
+                <div className="stat">
+                  <div className="stat-title">New Registers</div>
+                  <div className="stat-value">1,200</div>
+                  <div className="stat-desc">↘︎ 90 (14%)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/*Section 3 */}
+        <div className="min-h-screen">
           <div className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row">
               <div className="avatar mr-5">
@@ -38,11 +77,9 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <h1 className={`${indexStyles.quote} text-4xl font-bold mb-4 `}>
-                  <q>
-                    <FormattedMessage id="page.home.quote" />
-                  </q>
-                </h1>
+                <q className={`${indexStyles.quote} text-4xl font-bold mb-4 block`}>
+                  <FormattedMessage id="page.home.quote" />
+                </q>
                 <span>
                   <i className="text-xl ">Emmanuel Monsalve Parra | CTO</i>
                 </span>
@@ -50,109 +87,50 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/*Section 3 */}
-        <div className="min-h-screen">
-          <div className="w-screen text-center pt-5">
-            <h2 className="mb-5 text-4xl font-bold p-5">
-              <FormattedMessage id="page.home.section.title.services" />
-            </h2>
-          </div>
-          <div class="grid grid-cols-2 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-9">
-            <div class="flex items-center justify-center">
-             <Card />
-            </div>
-            <div class="flex items-center justify-center">
-             <Card />
-            </div>
-            <div class="flex items-center justify-center">
-             <Card />
-            </div>
-            <div class="flex items-center justify-center">
-             <Card />
-            </div>
-            <div class="flex items-center justify-center">
-             <Card />
-            </div>
-            <div class="flex items-center justify-center">
-             <Card />
-            </div>
-          </div>
-
-        </div>
         {/*Section 4 */}
-        <div className="min-h-screen max-h-fit">
-          <div className="w-screen text-center pt-5">
-            <h2 className="mb-5 text-4xl font-bold p-5 ">
-              <FormattedMessage id="page.home.section.title.quality" />
-            </h2>
-          </div>
-          <div className="flex flex-col w-full lg:flex-row">
-            <div className={`grid flex-grow card bg-base-300 rounded-box place-items-center m-8 card-body glass overflow-wrap-normal whitespace-normal ${indexStyles.standard}`} style={{ width: '50vw' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-20 h-20">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
-              </svg>
-              <span className=" font-bold text-2xl text-center">
-                <FormattedMessage id="page.home.section.item.standard.title" />
-              </span>
-              <p className=" text-xl text-center mx-4 mb-10">
-                <FormattedMessage id="page.home.section.item.standard.description" />
-              </p>
-            </div>
-            <div className="divider lg:divider-horizontal">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
-              </svg>
-            </div>
-            <div className={`grid flex-grow card bg-base-300 rounded-box place-items-center m-8 card-body glass overflow-wrap-normal whitespace-normal ${indexStyles.standard}`} style={{ width: '50vw' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-16 h-16">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
-              </svg>
-              <span className=" font-bold text-2xl text-center">
-                <FormattedMessage id="page.home.section.item.test.title" />
-              </span>
-              <p className=" text-xl text-center mx-4 mb-10">
-                <FormattedMessage id="page.home.section.item.test.description" />
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col w-full lg:flex-row">
-            <div className={`grid flex-grow card bg-base-300 rounded-box place-items-center m-8 card-body glass overflow-wrap-normal whitespace-normal ${indexStyles.standard}`} style={{ width: '50vw' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-16 h-16">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
-              </svg>
-              <span className=" font-bold text-2xl text-center">
-                <FormattedMessage id="page.home.section.item.code.title" />
-              </span>
-              <p className=" text-xl text-center mx-4 mb-10">
-                <FormattedMessage id="page.home.section.item.code.description" />
-              </p>
-            </div>
-            <div className="divider lg:divider-horizontal">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
-              </svg>
-
-            </div>
-            <div className={`grid flex-grow card bg-base-300 rounded-box place-items-center m-8 card-body glass overflow-wrap-normal whitespace-normal ${indexStyles.standard}`} style={{ width: '50vw' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-16 h-16">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-              </svg>
-
-              <span className=" font-bold text-2xl text-center">
-                <FormattedMessage id="page.home.section.item.automatization.title" />
-              </span>
-              <p className=" text-xl text-center mx-4 mb-10">
-                <FormattedMessage id="page.home.section.item.automatization.description" />
-              </p>
-            </div>
+        <div className="min-h-screen">
+          <h2 className="mb-5 text-4xl font-bold text-center">
+            <FormattedMessage id="page.home.section.title.services" />
+          </h2>
+          <div className="w-screen pt-5">
+            <Service
+              isLeft={true}
+              key={intl.formatMessage({ id: "page.home.card.ti.title" })}
+              title={intl.formatMessage({ id: "page.home.card.ti.title" })}
+              description={intl.formatMessage({ id: "page.home.card.ti.description" })}
+              image="/imgs/MF-TI.svg"
+              badgeOne={intl.formatMessage({ id: "page.home.card.ti.category.one" })}
+              badgeTwo={intl.formatMessage({ id: "page.home.card.ti.category.two" })} />
+            <Service
+              isLeft={false}
+              key={intl.formatMessage({ id: "page.home.card.soft.title" })}
+              title={intl.formatMessage({ id: "page.home.card.soft.title" })}
+              description={intl.formatMessage({ id: "page.home.card.soft.description" })}
+              image="/imgs/MF-SOFT.svg"
+              badgeOne={intl.formatMessage({ id: "page.home.card.soft.category.one" })}
+              badgeTwo={intl.formatMessage({ id: "page.home.card.soft.category.two" })} />
+            <Service
+              isLeft={true}
+              key={intl.formatMessage({ id: "page.home.card.auto.title" })}
+              title={intl.formatMessage({ id: "page.home.card.auto.title" })}
+              description={intl.formatMessage({ id: "page.home.card.auto.description" })}
+              image="/imgs/MF-AUTO.svg"
+              badgeOne={intl.formatMessage({ id: "page.home.card.auto.category.one" })}
+              badgeTwo={intl.formatMessage({ id: "page.home.card.auto.category.two" })} />
+            <Service
+              isLeft={false}
+              key={intl.formatMessage({ id: "page.home.card.support.title" })}
+              title={intl.formatMessage({ id: "page.home.card.support.title" })}
+              description={intl.formatMessage({ id: "page.home.card.support.description" })}
+              image="/imgs/MF-SUPPORT.svg"
+              badgeOne={intl.formatMessage({ id: "page.home.card.support.category.one" })}
+              badgeTwo={intl.formatMessage({ id: "page.home.card.support.category.two" })} />
           </div>
         </div>
         {/*Section 5 */}
         <div className="hero min-h-screen">
-          <div className="hero-content flex-col lg:flex-row-reverse md:flex-row-reverse">
-            <div className="lg:ml-28 md:ml-10 md:relative">
-              <Image src="/imgs/smartmockup.png" alt="mockup" height={1066} width={1062} />
-            </div>
+          <div className="hero-content flex-col lg:flex-row-reverse md:flex-row">
+            <Image className="transform scale-x-[-1] ml-10" src="/imgs/smartmockup.png" alt="mockup" height={550} width={550} />
             <div className="max-w-md">
               <h1 className="text-4xl md:text-4xl lg:text-4xl font-bold ">
                 <FormattedMessage id="page.home.cta.title" />
