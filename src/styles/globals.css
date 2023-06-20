@@ -18,10 +18,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(0,0,0);
+}
+
+.bgGradient {
+  background: linear-gradient(169deg, rgba(0,0,0,1) 0%, rgba(10,11,13,1) 17%, rgba(45,15,94,1) 100%, rgba(0,0,0,1) 100%);
 }

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import dynamic from "next/dynamic";
 import Layout from "@/components/layout";
 import MapChart from "@/components/map";
@@ -22,6 +23,7 @@ export default function Contact() {
     const [formMessage, setFormMessage] = useState("");
     const [emailRequired, setEmailRequired] = useState(false);
     const [recaptchaNeeded, setRecaptchaNeeded] = useState(false);
+    const [wppMessage] = useState("Hola 👋\nComo podemos ayudarte?");
 
     const onReCAPTCHAChange = async (captchaCode) => {
         if (!captchaCode) {
@@ -91,12 +93,12 @@ export default function Contact() {
             setResponseType(AlertTypes.WARNING);
         }
     }
-  /*   intl.formatMessage({ id: "page.home.description" }) */
+    /*   intl.formatMessage({ id: "page.home.description" }) */
 
     return (
         <Layout title={`${intl.formatMessage({ id: 'page.route.contact' })} | HopeDev`} description={intl.formatMessage({ id: "page.home.description" })}>
             <div className="hero min-h-screen bg-base-200">
-            <MapChart />
+                <MapChart />
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-4xl font-bold"> <FormattedMessage id="page.contact.title" /></h1>
@@ -141,6 +143,19 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
+                <FloatingWhatsApp
+                    avatar="/imgs/favicon-256.png"
+                    statusMessage="Pronto te responderemos..."
+                    chatMessage={wppMessage}
+                    placeholder="Escribe un mensaje..."
+                    darkMode={true}
+                    phoneNumber="+573177837117"
+                    accountName="HopeDev"
+                    allowEsc
+                    allowClickAway
+                    notification
+                    notificationSound
+                />
             </div>
             {responseType ? <Alert alertType={responseType} message={formMessage} /> : null}
         </Layout>

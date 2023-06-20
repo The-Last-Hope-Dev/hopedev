@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.2",
     "autoprefixer": "10.4.14",
     "daisyui": "^2.51.5",
     "eslint": "8.38.0",
@@ -20,6 +21,7 @@
     "react": "18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "18.2.0",
+    "react-floating-whatsapp": "^5.0.8",
     "react-google-recaptcha": "^2.1.0",
     "react-intl": "^6.3.2",
     "react-simple-maps": "3.0.0",

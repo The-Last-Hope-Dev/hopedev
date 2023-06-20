@@ -13,6 +13,7 @@
     "page.route.portfolio": "Portfolio",
     "page.route.tools": "Tools",
     "page.route.cv": "Resumes",
+    "page.route.readservices": "Explore Services",
     "page.footer.section.content": "Content",
     "page.footer.section.company": "Company",
     "page.footer.section.legal": "Legal",
@@ -62,7 +63,7 @@
     "page.home.card.auto.category.two": "Business",
     
     "page.home.card.support.title": "Maintenance and Support Services",
-    "page.home.card.support.description": "We offer maintenance and support services to ensure our clients' systems run smoothly.",
+    "page.home.card.support.description": "We offer maintenance and support services to ensure our client's systems run smoothly.",
     "page.home.card.support.category.one": "Information Technology",
     "page.home.card.support.category.two": "Support"
 }

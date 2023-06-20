@@ -3,7 +3,7 @@ export default function Service({ isLeft, title, description, badgeOne, badgeTwo
     return (
         <div className="hero">
             <div className={`hero-content flex-col ${isLeft ? "lg:flex-row" : "lg:flex-row-reverse"} p-0`}>
-                <Image className="transform scale-x-[-1]" src={image} alt={`${title} svg image`} width={480} height={480} />
+                <Image className="transform scale-x-[-1]" src={image} alt={`${title} svg image`} width={450} height={450} />
                 <div>
                     <h1 className="text-4xl font-bold">{title}</h1>
                     <p className="py-6 text-xl">{description}</p>

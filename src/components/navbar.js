@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import Link from 'next/link';
 import { FormattedMessage } from "react-intl";
-import { isMobile } from 'react-device-detect'
+import { isMobile } from 'react-device-detect';
+
 export default function NavBar() {
     const [showHomeButton, setShowHomeButton] = useState(false);
 

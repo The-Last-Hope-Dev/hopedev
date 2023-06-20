@@ -47,7 +47,7 @@ export default function Footer() {
                     <Link href='/team' className="link link-hover" hrefLang="x-default">
                         <FormattedMessage id="page.footer.link.terms" />
                     </Link>
-                    <Link href='/portfolio' className="link link-hover" hrefLang="x-default">
+                    <Link href='/privacy' className="link link-hover" hrefLang="x-default">
                         <FormattedMessage id="page.footer.link.privacy" />
                     </Link>
                     <Link href='/cv' className="link link-hover" hrefLang="x-default">
