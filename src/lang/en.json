@@ -25,6 +25,7 @@
     "page.footer.link.english": "English",
     "page.footer.text.company":  "Providing Reliable Technology Solutions Since 2023",
     "page.home.section.title.quality": "Quality Software Development",
+    "page.home.section.title.stack": "Our Technology Stack",
     "page.home.section.title.services": "Our services",
     "page.home.section.item.standard.title": "Coding Standards",
     "page.home.section.item.standard.description": "We maintain high coding standards to ensure that our projects are clear and consistent. This includes naming conventions, indentation, and comments, which help us develop clean and easily maintainable code.",
@@ -65,5 +66,9 @@
     "page.home.card.support.title": "Maintenance and Support Services",
     "page.home.card.support.description": "We offer maintenance and support services to ensure our client's systems run smoothly.",
     "page.home.card.support.category.one": "Information Technology",
-    "page.home.card.support.category.two": "Support"
+    "page.home.card.support.category.two": "Support",
+
+    "page.home.endCta.title": "Ready to transform your ideas into reality?",
+    "page.home.endCta.description": "Let our team of experts bring your vision to life. Contact us today!"
+
 }

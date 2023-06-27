@@ -25,6 +25,7 @@
     "page.footer.link.english": "Inglés",
     "page.footer.text.company":  "Brindando soluciones tecnológicas confiables desde 2023",
     "page.home.section.title.quality": "Desarrollo de software de calidad",
+    "page.home.section.title.stack": "Nuestro Stack de Tecnologías",
     "page.home.section.title.services": "Nuestros servicios",
     "page.home.section.item.standard.title": "Estándares de codificación",
     "page.home.section.item.standard.description": " Mantenemos altos estándares de codificación para garantizar que nuestros proyectos sean claros y coherentes. Esto incluye nomenclatura, indentación y comentarios, lo que nos ayuda a desarrollar un código limpio y fácilmente mantenible.",
@@ -62,7 +63,10 @@
     "page.home.card.support.title": "Servicios de mantenimiento y soporte",
     "page.home.card.support.description": "Ofrecemos servicios de mantenimiento y soporte para garantizar que los sistemas de nuestros clientes funcionen sin problemas.",
     "page.home.card.support.category.one": "Tecnología de la Información",
-    "page.home.card.support.category.two": "Soporte"
+    "page.home.card.support.category.two": "Soporte",
+
+    "page.home.endCta.title": "¿Listo para convertir tus ideas en realidad?",
+    "page.home.endCta.description": "Permite que nuestro equipo de expertos haga realidad tu visión. ¡Contáctanos hoy mismo!"
 }
 
 

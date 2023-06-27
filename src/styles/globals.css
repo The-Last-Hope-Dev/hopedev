@@ -3,24 +3,45 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(0,0,0);
+    color: rgb(var(--foreground-rgb));
+    background: rgb(0, 0, 0);
 }
 
 .bgGradient {
-  background: linear-gradient(169deg, rgba(0,0,0,1) 0%, rgba(10,11,13,1) 17%, rgba(45,15,94,1) 100%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(169deg, rgba(0, 0, 0, 1) 0%, rgba(10, 11, 13, 1) 17%, rgba(45, 15, 94, 1) 100%, rgba(0, 0, 0, 1) 100%);
+}
+
+
+.gridBrand {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.gridBrandWithFilter {
+    filter: grayscale(100%) invert(0.4) brightness(100%) saturate(300%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.gridBrandWithFilter:hover {
+    filter: invert(0.4) brightness(100%) saturate(300%);
+    transform: scale(1.1);
+}
+
+.gridBrand:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
 }
