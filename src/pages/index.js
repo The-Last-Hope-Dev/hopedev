@@ -13,7 +13,7 @@ export default function Home() {
     <Layout title={`HopeDev | ${intl.formatMessage({ id: 'page.route.home' })}`} description={intl.formatMessage({ id: "page.home.description" })}>
       <div >
         {/*Section 1 */}
-        <div className={indexStyles.wavesHeader}>
+        <div className={`min-h-screen flex justify-center items-center ${indexStyles.wavesHeader}`}>
           <div className={indexStyles.innerWaves}>
             <div className="w-full h-full flex justify-center items-center">
               <div className="hero-content flex-col lg:flex-row-reverse md:flex-row">
@@ -70,24 +70,24 @@ export default function Home() {
                 <div className="flex justify-center items-center">
                   <div className="stats stats-vertical shadow bg-black">
                     <div className="stat">
-                      <div className="stat-title text-lg md:text-xl"><FormattedMessage id="page.home.info.devs" /></div>
-                      <div className="stat-value text-3xl md:text-4xl mb-2">4,200</div>
-                      <div className="stat-desc text-base md:text-lg">↗︎ 400 (22%)</div>
+                      <div className="stat-title text-xl"><FormattedMessage id="page.home.info.devs" /></div>
+                      <div className="stat-value text-4xl mb-2">4,200</div>
+                      <div className="stat-desc text-lg">↗︎ 400 (22%)</div>
                     </div>
                     <div className="stat">
-                      <div className="stat-title text-lg md:text-xl"><FormattedMessage id="page.home.info.projects" /></div>
-                      <div className="stat-value text-3xl md:text-4xl mb-2">1,200</div>
-                      <div className="stat-desc text-base md:text-lg">↘︎ 90 (14%)</div>
+                      <div className="stat-title text-xl"><FormattedMessage id="page.home.info.projects" /></div>
+                      <div className="stat-value text-4xl mb-2">1,200</div>
+                      <div className="stat-desc text-lg">↘︎ 90 (14%)</div>
                     </div>
                     <div className="stat">
-                      <div className="stat-title text-lg md:text-xl"><FormattedMessage id="page.home.info.repositories" /></div>
-                      <div className="stat-value text-3xl md:text-4xl mb-2">1,200</div>
-                      <div className="stat-desc text-base md:text-lg">↘︎ 90 (14%)</div>
+                      <div className="stat-title text-xl"><FormattedMessage id="page.home.info.repositories" /></div>
+                      <div className="stat-value text-4xl mb-2">1,200</div>
+                      <div className="stat-desc text-lg">↘︎ 90 (14%)</div>
                     </div>
                     <div className="stat">
-                      <div className="stat-title text-lg md:text-xl"><FormattedMessage id="page.home.info.tools" /></div>
-                      <div className="stat-value text-3xl md:text-4xl mb-2">31K</div>
-                      <div className="stat-desc text-base md:text-lg">Jan 1st - Feb 1st</div>
+                      <div className="stat-title text-xl"><FormattedMessage id="page.home.info.tools" /></div>
+                      <div className="stat-value text-4xl mb-2">31K</div>
+                      <div className="stat-desc text-lg">Jan 1st - Feb 1st</div>
                     </div>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <q className={`${indexStyles.quote} text-2xl pl-4 md:pl-0 mt-10 md:mt-0 md:text-3xl lg:text-4xl font-bold mb-4 block`}>
+              <q className={`${indexStyles.quote} text-2xl px-4 md:px-0 mt-10 md:mt-0 md:text-3xl lg:text-4xl font-bold mb-4 block`}>
                 <FormattedMessage id="page.home.quote" />
               </q>
               <span>
