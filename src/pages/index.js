@@ -13,7 +13,7 @@ export default function Home() {
     <Layout title={`HopeDev | ${intl.formatMessage({ id: 'page.route.home' })}`} description={intl.formatMessage({ id: "page.home.description" })}>
       <div >
         {/*Section 1 */}
-        <div className={`min-h-screen flex justify-center items-center ${indexStyles.wavesHeader}`}>
+        <div className={indexStyles.wavesHeader}>
           <div className={indexStyles.innerWaves}>
             <div className="w-full h-full flex justify-center items-center">
               <div className="hero-content flex-col lg:flex-row-reverse md:flex-row">
