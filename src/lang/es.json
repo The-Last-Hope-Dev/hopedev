@@ -66,7 +66,16 @@
     "page.home.card.support.category.two": "Soporte",
 
     "page.home.endCta.title": "¿Listo para convertir tus ideas en realidad?",
-    "page.home.endCta.description": "Permite que nuestro equipo de expertos haga realidad tu visión. ¡Contáctanos hoy mismo!"
+    "page.home.endCta.description": "Permite que nuestro equipo de expertos haga realidad tu visión. ¡Contáctanos hoy mismo!",
+
+    "page.home.info.title": "Desarrollo de software con propósito",
+    "page.home.info.description.one": "En HopeDev, somos apasionados del desarrollo de software y estamos comprometidos en impulsar el éxito de nuestros clientes en el mundo digital.",
+    "page.home.info.description.two": "Nuestra experiencia y conocimiento en tecnología nos permiten crear soluciones a medida que impulsan la eficiencia y la productividad.",
+    "page.home.info.description.three": "Nos enfocamos en crear relaciones a largo plazo con nuestros clientes, trabajando juntos para alcanzar sus metas y objetivos de negocio. En HopeDev, no solo creamos software, creamos soluciones innovadoras que transforman los negocios y cambian el mundo.",
+    "page.home.info.devs": "Desarrolladores",
+    "page.home.info.projects": "Proyectos",
+    "page.home.info.repositories": "Repositorios",
+    "page.home.info.tools": "Herramientas"
 }
 
 

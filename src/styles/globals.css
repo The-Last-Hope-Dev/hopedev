@@ -45,3 +45,13 @@ body {
     filter: grayscale(0%);
     transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+    .gridBrand {
+        filter: grayscale(0%);
+    }
+
+    .gridBrandWithFilter {
+        filter: invert(0.4) brightness(100%) saturate(300%);
+    }
+}

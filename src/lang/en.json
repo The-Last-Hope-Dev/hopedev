@@ -69,6 +69,15 @@
     "page.home.card.support.category.two": "Support",
 
     "page.home.endCta.title": "Ready to transform your ideas into reality?",
-    "page.home.endCta.description": "Let our team of experts bring your vision to life. Contact us today!"
+    "page.home.endCta.description": "Let our team of experts bring your vision to life. Contact us today!",
+    
+    "page.home.info.title": "Software Development with Purpose",
+    "page.home.info.description.one": "At HopeDev, we are passionate about software development and committed to driving the success of our clients in the digital world.",
+    "page.home.info.description.two": "Our experience and technology knowledge enable us to create customized solutions that enhance efficiency and productivity. ",
+    "page.home.info.description.three": "We focus on building long-term relationships with our clients, working together to achieve their business goals and objectives. At HopeDev, we don't just create software, we create innovative solutions that transform businesses and change the world.",
+    "page.home.info.devs": "Developers",
+    "page.home.info.projects": "Projects",
+    "page.home.info.repositories": "Repositories",
+    "page.home.info.tools": "Tools"
 
 }
