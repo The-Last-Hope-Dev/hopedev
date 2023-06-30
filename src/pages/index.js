@@ -17,7 +17,7 @@ export default function Home() {
           <div className={indexStyles.innerWaves}>
             <div className="w-full h-full flex justify-center items-center">
               <div className="hero-content flex-col lg:flex-row-reverse md:flex-row">
-                <Image className="hidden md:block transform scale-x-[-1] ml-10" src="/imgs/smartmockup.png" alt="mockup" height={533} width={531} priority={true} />
+                <Image className="hidden lg:block transform scale-x-[-1] ml-10" src="/imgs/smartmockup.png" alt="mockup" height={533} width={531} priority={true} />
                 <div className="max-w-lg mr-10">
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold ">
                     <FormattedMessage id="page.home.cta.title" />
@@ -57,7 +57,7 @@ export default function Home() {
             </h2>
             <div className="flex justify-center items-center">
               <div className="grid grid-cols-1 md:grid-cols-3">
-                <div className="flex flex-col justify-center items-center px-4 md:px-0 text-lg md:text-xl">
+                <div className="flex flex-col justify-center items-center px-4 lg:px-0 text-lg md:text-xl">
                   <p className="max-w-sm"><FormattedMessage id="page.home.info.description.one" /></p>
                   <br />
                   <p className="max-w-sm"><FormattedMessage id="page.home.info.description.two" /></p>
@@ -95,12 +95,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-20 md:mt-0 mx-6 md:mx-40 bg-neutral" style={{
+        <div className="mt-20 lg:mt-0 mx-6 md:mx-40 bg-neutral" style={{
           height: "1px",
         }} />
         {/*Section 3 */}
         <div className="min-h-screen flex justify-center items-center">
-          <div className="flex flex-col md:flex-row max-w-6xl">
+          <div className="flex flex-col md:flex-row max-w-6xl md:px-4 px-0">
             <div className="avatar mr-10 justify-center items-center">
               <div className="w-36 h-36 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                 <Image src="/imgs/avatar-emmus.jpg" alt="Emmanuel avatar picture" width={250} height={250} />
@@ -121,7 +121,7 @@ export default function Home() {
         }} />
         {/*Section 4 */}
         <div className="min-h-screen flex justify-center items-center">
-          <div>
+          <div className="mx-0 md:mx-2">
             <h2 className="my-20 px-1 md:px-0 text-3xl md:text-4xl font-bold text-center">
               <FormattedMessage id="page.home.section.title.services" />
             </h2>
@@ -159,7 +159,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mx-6 md:mx-40 bg-neutral" style={{
+        <div className="md:mt-10 mt-0 mx-6 md:mx-40 bg-neutral" style={{
           height: "1px",
         }} />
         {/*Section 5 */}
@@ -173,7 +173,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-20 md:mt-0 mx-6 md:mx-40 bg-neutral" style={{
+        <div className="mt-20 lg:mt-0 mx-6 md:mx-40 bg-neutral" style={{
           height: "1px",
         }} />
         {/*Section 6 */}
