@@ -20,7 +20,7 @@ export default function Home() {
                 <Image className="hidden lg:block transform scale-x-[-1] ml-10" src="/imgs/smartmockup.png" alt="mockup" height={533} width={531} priority={true} />
                 <div className="max-w-lg mr-10">
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold ">
-                    <FormattedMessage id="page.home.cta.title" />
+                   Test Admin
                   </h1>
                   <p className="text-xl md:text-2xl  py-6">
                     <FormattedMessage id="page.home.cta.message" />
