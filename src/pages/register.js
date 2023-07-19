@@ -1,13 +1,13 @@
 import Layout from "@/components/layout"
 import Link from "next/link";
 
-export default function Home() {
+export default function Register() {
   return (
     <Layout title='HopeDev | Admin' description='HopeDev Admin Page'>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Login now!</h1>
+            <h1 className="text-5xl font-bold">Register now!</h1>
             <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -27,8 +27,8 @@ export default function Home() {
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
                 <label className="label">
-                  <Link href="/register" className="label-text-alt link link-hover">
-                    New account?
+                  <Link href="/" className="label-text-alt link link-hover">
+                    You have an account?
                   </Link>
                 </label>
               </div>
