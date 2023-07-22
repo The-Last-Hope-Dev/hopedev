@@ -4,12 +4,12 @@ import bcrypt from "bcryptjs"
 
 export default async function handler(req, res) {
     const { method } = req;
-    const { email, password, name } = req.body;
+    const { name, email, password,  } = req.body;
 
     switch (method) {
         case "POST":
 
-            if (!email || !password || !name) {
+            if (!name || !email || !password ) {
                 return res.status(400).json({
                     success: false,
                     message: "Falta informacion en la peticion",
@@ -33,7 +33,11 @@ export default async function handler(req, res) {
                 res.status(200).json({
                     success: true,
                     message: "Usuario creado",
-                    data: newUser
+                    user: {
+                        _id: newUser._id,
+                        email: newUser.email,
+                        name: newUser.name
+                    }
                 });
             } catch (error) {
                 res.status(400).json({
